@@ -36,7 +36,6 @@ const inputStyle = css`
   display: flex;
   flex-direction: column;
   font-size: 1.25rem;
-  color: gray;
 
   input {
     width: 20rem;
@@ -45,7 +44,7 @@ const inputStyle = css`
     margin-bottom: 0.625rem;
     padding: 0.3125rem;
     font-size: 1.125rem;
-    border: 0.0625rem solid lightgray;
+    border: 0.0625rem solid;
     border-radius: 0.1875rem;
   }
 `;
