@@ -1,8 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import Button from 'components/Button/Button';
-import Input from 'components/Input/Input';
-import Link from 'components/Link/Link';
+import { Button, Input, Link } from 'components';
 
 export default function SignUp() {
   return (
