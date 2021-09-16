@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { Button, Input, Link } from 'components';
 import { useState, FormEvent, ChangeEvent } from 'react';
+import { Button, Input, Link, Alert } from 'components';
 
 export default function SignUp() {
   const [email, setEmail] = useState<string>('');
@@ -39,7 +39,7 @@ export default function SignUp() {
   const handleSignup = (e: FormEvent) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      alert('비밀번호가 일치하지 않습니다. 비밀번호를 확인해주세요');
+      alert('비밀번호가 일치하지 않습니다.');
       return;
     }
     console.log(e.target);
@@ -80,7 +80,9 @@ export default function SignUp() {
         onChange={handleChangeInputValue}
         onBlur={handleConfirmPassword}
       />
-      {errorPassword && '비밀번호가 일치하지 않습니다. 비밀번호를 확인해주세요'}
+      {errorPassword && (
+        <Alert type='error'>비밀번호가 일치하지 않습니다.</Alert>
+      )}
       <div className='btnWrapper'>
         <Button type='submit'>Create</Button>
       </div>
