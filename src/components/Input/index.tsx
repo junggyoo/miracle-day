@@ -7,7 +7,9 @@ interface Props {
   value?: string;
   name?: string;
   placeHolder?: string;
+  required?: boolean;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: () => void;
 }
 
 export default function Input({
@@ -16,7 +18,10 @@ export default function Input({
   value,
   name,
   placeHolder,
+  required,
   onChange,
+  onBlur,
+  ...props
 }: Props) {
   return (
     <label css={inputStyle}>
@@ -27,6 +32,9 @@ export default function Input({
         name={name}
         placeholder={placeHolder}
         onChange={onChange}
+        onBlur={onBlur}
+        required={required}
+        {...props}
       />
     </label>
   );
