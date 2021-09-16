@@ -17,10 +17,12 @@ export default function Button({ children, type, onClick }: Props) {
 
 const buttonStyle = css`
   width: 20rem;
-  height: 2.3rem;
+  height: 3.125rem;
   margin-bottom: 0.625rem;
   font-size: 1.125rem;
   border: 0.0625rem solid lightgray;
   border-radius: 0.625rem;
+  background-color: #122c91;
+  color: #eee;
   cursor: pointer;
 `;
