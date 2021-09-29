@@ -13,11 +13,18 @@ export const config = {
   cors: {
     allowOrigin: required('CORS_ALLOW_ORIGIN'),
   },
-  port: parseInt(required('PORT', 8080)),
+  port: parseInt(required('PORT')),
   db: {
     host: required('DB_HOST'),
     user: required('DB_USER'),
     database: required('DB_DATABASE'),
     password: required('DB_PASSWORD'),
+  },
+  bcrypt: {
+    saltRounds: parseInt(required('BCRYPT_SALT_ROUNDS')),
+  },
+  jwt: {
+    secretKey: required('JWT_SECRET'),
+    expiresInSec: parseInt(required('JWT_EXPIRES_SEC')),
   },
 };
